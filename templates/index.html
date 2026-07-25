@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AI Assistant</title>
+    <link rel="stylesheet"
+        href="{{ url_for('static', filename='style.css') }}">
+    <link rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
+</head>
+<body>
+<header>
+    <div class="logo">
+        🤖 My AI Assistant
+    </div>
+    <div class="badge">
+        Powered by Gemini ✨
+    </div>
+</header>
+<section class="hero">
+    <h1>Your Smart Ai-Assistant <span class=" rocket">🚀 </span></h1>
+   <p>
+Ask questions, summarize text, generate stories,
+and get intelligent AI-powered responses instantly.
+</p>
+
+</section>
+
+<div class="container">
+    <div class="left">
+        <div class="card">
+            <h2>
+                <i class="fa-solid fa-layer-group"></i>
+                Choose Function
+            </h2>
+            <select id="function">
+                <option>Answer Questions</option>
+                <option>Summarize Text</option>
+                <option>Generate Story</option>
+                <option>Study Tips</option>
+            </select>
+        </div>
+
+        <div class="card">
+            <h2>
+                <i class="fa-solid fa-pen"></i>
+                Enter Prompt
+            </h2>
+            <textarea
+                id="prompt"
+                placeholder="Ask anything..."></textarea>
+            <button id="generateBtn">
+                ✨ Generate Response
+            </button>
+        </div>
+        <div class="card">
+            <h2>💡 Tips</h2>
+            <ul>
+                <li>Be specific</li>
+                <li>Provide context</li>
+                <li>Ask one question at a time</li>
+            </ul>
+        </div>
+    </div>
+    <div class="right">
+        <div class="card">
+            <h2>
+            🤖 AI Response
+            </h2>
+            <div id="response">
+                Hello 👋
+                <br><br>
+                Your response will appear here.
+            </div>
+        </div>
+        <div class="card">
+            <h2>Feedback</h2>
+            <div class="feedback">
+                <button class="yes">
+                    👍 Helpful
+                </button>
+                <button class="no">
+                    👎 Not Helpful
+                </button>
+            </div>
+        </div>
+        <div class="card">
+            <h2>About</h2>
+            <p>
+                This AI Assistant is built using
+                Flask + Gemini API 
+                 This will help You in  learning,
+                 productivity, and creativity. Whether you need quick answers,
+                 text summaries, creative ideas, or helpful suggestions, the
+                 assistant is designed to provide intelligent and reliable
+                 responses through an intuitive and modern interface.
+    
+            </p>
+        </div>
+    </div>
+</div>
+<footer>
+  <footer>
+    © AI-Powered-Assistant | Designed & Developed by Deeksha Rajput
+</footer>
+</footer>
+
+<script src="{{ url_for('static', filename='script.js') }}"></script>
+</body>
+</html>
